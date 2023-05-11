@@ -8,11 +8,13 @@ export type Recipe = {
 	recipe: {
 		label: string;
 		images: {
-			thumbnail: RecipeImage | RecipeImage[];
+			REGULAR: RecipeImage;
+			THUMBNAIL: RecipeImage;
 		};
 		url: string;
 		yield: number;
 		healthLabels: string[];
+		dietLabels: string[];
 		ingridientLines: string[];
 		calories: number;
 		cuisineType: string[];
