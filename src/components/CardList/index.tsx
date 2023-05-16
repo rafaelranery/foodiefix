@@ -3,24 +3,32 @@ import { Card } from '..';
 import { RootReducer } from '../../store/store';
 import { gatherTags } from '../../utils/functions/gatherTags';
 import { gatherHealthLabels } from '../../utils/functions/gatherHealthLabels';
+import { useFilteredList } from '../../hooks/useFilteredList';
+import { useGetRandomQuery } from '../../services/api';
 
 export const CardList = () => {
-	const { itens } = useSelector((state: RootReducer) => state.recipesList);
+	// const { itens } = useSelector((state: RootReducer) => state.recipesList);
+	// useFilteredList();
+	const { data: itens } = useGetRandomQuery();
 
-	return (
-		<ul className="p-5 w-full flex flex-wrap items-start justify-center md:justify-between gap-3 gap-y-6 overflow-y-scroll">
-			{itens.map((item) => {
-				return (
-					<Card
-						key={item.recipe.label}
-						label={item.recipe.label}
-						img={item.recipe.images.REGULAR.url}
-						url={item.recipe.url}
-						tags={gatherTags(item)}
-						labels={gatherHealthLabels(item)}
-					/>
-				);
-			})}
-		</ul>
-	);
+	if (itens) {
+		return (
+			<ul className="p-5 w-full flex flex-wrap items-start justify-center md:justify-between gap-3 gap-y-6 overflow-y-scroll">
+				{itens.map((item) => {
+					return (
+						<Card
+							key={item.recipe.label}
+							label={item.recipe.label}
+							img={item.recipe.images.REGULAR.url}
+							url={item.recipe.url}
+							tags={gatherTags(item)}
+							labels={gatherHealthLabels(item)}
+						/>
+					);
+				})}
+			</ul>
+		);
+	}
+
+	return <h4>Carregando...</h4>;
 };
