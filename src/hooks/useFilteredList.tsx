@@ -6,7 +6,7 @@ import { setUri } from '../store/FilterSlice';
 
 export const useFilteredList = () => {
 	const { tags } = useSelector((state: RootReducer) => state.filters);
-	const { cuisineType, diet, health, mealType } = useSelector(
+	const { cuisineType, diet, health, mealType, dishType } = useSelector(
 		(state: RootReducer) => state.tags.itens
 	);
 	const dispatch = useDispatch();
@@ -19,13 +19,20 @@ export const useFilteredList = () => {
 		if (tags.length > 0) {
 			tags.forEach((tag) => {
 				if (diet.includes(tag)) {
-					baseUri += `&diet=${tag}`;
+					const treatedTag = tag.replace(/\s/g, '%20');
+					baseUri += `&diet=${treatedTag}`;
 				} else if (health.includes(tag)) {
-					baseUri += `&health=${tag}`;
+					const treatedTag = tag.replace(/\s/g, '%20');
+					baseUri += `&health=${treatedTag}`;
 				} else if (cuisineType.includes(tag)) {
-					baseUri += `&cuisineType=${tag}`;
+					const treatedTag = tag.replace(/\s/g, '%20');
+					baseUri += `&cuisineType=${treatedTag}`;
 				} else if (mealType.includes(tag)) {
-					baseUri += `&mealType=${tag}`;
+					const treatedTag = tag.replace(/\s/g, '%20');
+					baseUri += `&mealType=${treatedTag}`;
+				} else if (dishType.includes(tag)) {
+					const treatedTag = tag.replace(/\s/g, '%20');
+					baseUri += `&dishType=${treatedTag}`;
 				}
 			});
 			baseUri += '&random=true';

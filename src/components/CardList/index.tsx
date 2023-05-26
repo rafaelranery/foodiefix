@@ -7,9 +7,10 @@ import { useFilteredList } from '../../hooks/useFilteredList';
 import { useGetRandomQuery } from '../../services/api';
 
 export const CardList = () => {
-	// const { itens } = useSelector((state: RootReducer) => state.recipesList);
+	const { itens } = useSelector((state: RootReducer) => state.recipesList);
 	// useFilteredList();
-	const { data: itens } = useGetRandomQuery();
+	// const { data: itens } = useGetRandomQuery();
+	useFilteredList();
 
 	if (itens) {
 		return (
