@@ -12,6 +12,9 @@ type Props = {
 export const Tag = ({ title }: Props) => {
 	const dispatch = useDispatch();
 	const { tags } = useSelector((state: RootReducer) => state.filters);
+	const { cuisineType, mealType } = useSelector(
+		(state: RootReducer) => state.tags.itens
+	);
 
 	const [isInFilters, setIsInFilters] = useState(false);
 
@@ -24,9 +27,24 @@ export const Tag = ({ title }: Props) => {
 	}, [tags]);
 
 	const handleAddFilter = (tagTitle: string) => {
+		if (cuisineType.includes(tagTitle)) {
+			tags.forEach((tag) => {
+				if (cuisineType.includes(tag)) {
+					dispatch(removeFilter(tag));
+				}
+			});
+		}
+		if (mealType.includes(tagTitle)) {
+			tags.forEach((tag) => {
+				if (mealType.includes(tag)) {
+					dispatch(removeFilter(tag));
+				}
+			});
+		}
 		setIsInFilters(!isInFilters);
 		dispatch(addFilter(tagTitle));
 	};
+
 	const handleRemoveFilter = (tagTitle: string) => {
 		setIsInFilters(!isInFilters);
 		dispatch(removeFilter(tagTitle));
