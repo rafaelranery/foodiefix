@@ -8,7 +8,7 @@ function App() {
 	return (
 		<>
 			<SideBar />
-			<main className="max-h-screen fixed flex h-full sm:left-[256px] bg-gray-500">
+			<main className="max-h-screen fixed flex max-w-screen w-full h-full sm:pl-[256px] bg-gray-500">
 				<Router />
 			</main>
 		</>
