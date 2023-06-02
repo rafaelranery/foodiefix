@@ -10,7 +10,7 @@ type Props = {
 
 export const Card = ({ label, img, url, tags, labels }: Props) => {
 	return (
-		<div className="max-w-[280px] h-auto bg-white rounded-lg shadow dark:bg-gray-800 relative">
+		<div className="max-w-[280px] h-auto bg-cPink rounded-lg dark:bg-gray-800 relative shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] transition-shadow duration-500">
 			<div className="absolute p-2 flex flex-wrap gap-1">
 				{tags.map((tag) => (
 					<Tag key={tag} title={tag} />
@@ -48,7 +48,7 @@ export const Card = ({ label, img, url, tags, labels }: Props) => {
 					href={url}
 					target="_blank"
 					referrerPolicy="no-referrer"
-					className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+					className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cGreen rounded-lg hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 					rel="noreferrer"
 				>
 					Read more

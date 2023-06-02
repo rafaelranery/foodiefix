@@ -54,14 +54,14 @@ export const Tag = ({ title }: Props) => {
 			{!isInFilters ? (
 				<span
 					onClick={() => handleAddFilter(title)}
-					className="py-1 px-1.5 cursor-pointer rounded bg-red-400 text-sm font-medium text-slate-50"
+					className="py-1 px-1.5 cursor-pointer rounded bg-cRed text-sm font-medium text-slate-50"
 				>
 					{title}
 				</span>
 			) : (
 				<span
 					onClick={() => handleRemoveFilter(title)}
-					className="py-1 px-1.5 cursor-pointer rounded bg-red-400 text-sm font-medium text-slate-50 flex items-center gap-1"
+					className="py-1 px-1.5 cursor-pointer rounded bg-cRed text-sm font-medium text-slate-50 flex items-center gap-1"
 				>
 					{title}
 					<svg
