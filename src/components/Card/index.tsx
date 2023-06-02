@@ -17,7 +17,12 @@ export const Card = ({ label, img, url, tags, labels }: Props) => {
 				))}
 			</div>
 
-			<a href={url}>
+			<a
+				href={url}
+				target="_blank"
+				referrerPolicy="no-referrer"
+				rel="noreferrer"
+			>
 				<img
 					className="rounded-t-lg max-w-full w-full h-[300px] object-cover"
 					src={img}
@@ -26,7 +31,12 @@ export const Card = ({ label, img, url, tags, labels }: Props) => {
 			</a>
 
 			<div className="p-5">
-				<a href={url}>
+				<a
+					href={url}
+					target="_blank"
+					referrerPolicy="no-referrer"
+					rel="noreferrer"
+				>
 					<h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
 						{label}
 					</h5>
@@ -35,8 +45,11 @@ export const Card = ({ label, img, url, tags, labels }: Props) => {
 					{labels.length > 100 ? labels.slice(0, 101) + '...' : labels}
 				</p>
 				<a
-					href="#"
+					href={url}
+					target="_blank"
+					referrerPolicy="no-referrer"
 					className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+					rel="noreferrer"
 				>
 					Read more
 					<svg

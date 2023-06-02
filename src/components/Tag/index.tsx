@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 import { RootReducer } from '../../store/store';
 import { addFilter, removeFilter } from '../../store/FilterSlice';
-import { useFilteredList } from '../../hooks/useFilteredList';
 
 type Props = {
 	title: string;
