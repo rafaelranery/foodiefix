@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { Recipe } from '../classes/Recipe';
-
 type RecipesListState = {
 	itens: Recipe[];
 };

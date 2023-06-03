@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { TagsObj } from '../classes/TagsDoc';
 
 type TagsState = {
 	itens: TagsObj;

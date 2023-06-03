@@ -1,6 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { ApiResJson } from '../classes/ApiResJson';
-import { Recipe } from '../classes/Recipe';
 
 const api = createApi({
 	baseQuery: fetchBaseQuery({

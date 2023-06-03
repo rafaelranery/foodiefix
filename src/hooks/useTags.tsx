@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { ApiDoc, TagsObj, TagAndLabelsDoc } from '../classes/TagsDoc';
 import { setTags } from '../store/TagsSlice';
 
 export const useTags = () => {

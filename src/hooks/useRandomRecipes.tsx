@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { setRecipes } from '../store/RecipesListSlice';
-import { Recipe } from '../classes/Recipe';
-import { ApiResJson } from '../classes/ApiResJson';
 import { RootReducer } from '../store/store';
 
 export const useRandomRecipes = () => {
