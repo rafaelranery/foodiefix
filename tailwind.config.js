@@ -7,12 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        cRed: "#fd5e53",
+        cRed: "#e63946",
         cWhite: '#f9fcfb',
         cLightGreen: '#b0eacd',
         cGreen: '#21bf73',
         cPink: '#F4DADA',
-        cDarkPink: '#E688A1'
+        cDarkPink: '#E688A1',
+        btnPrimary: '#457b9d',
+        btnHover: '#1d3557'
       }
     },
   },

@@ -22,7 +22,7 @@ export const CardList = () => {
 
 	if (!loader) {
 		return (
-			<ul className="p-5 w-full flex flex-wrap items-start justify-center md:justify-between gap-3 gap-y-6 overflow-y-scroll">
+			<ul className="p-5 w-full flex flex-wrap items-start justify-center md:justify-between gap-1 gap-y-6 overflow-y-scroll">
 				{itens.map((item) => {
 					return (
 						<Card

@@ -1,5 +1,7 @@
 import { Tag } from '..';
 
+import imgNotFound from '../../assets/image_not_found.jpg';
+
 type Props = {
 	label: string;
 	img: string;
@@ -10,7 +12,7 @@ type Props = {
 
 export const Card = ({ label, img, url, tags, labels }: Props) => {
 	return (
-		<div className="max-w-[280px] h-auto bg-cPink rounded-lg dark:bg-gray-800 relative shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] transition-shadow duration-500">
+		<div className="max-w-full md:max-w-[230px] h-auto bg-cPink rounded-lg dark:bg-gray-800 relative shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] transition-shadow duration-500">
 			<div className="absolute p-2 flex flex-wrap gap-1">
 				{tags.map((tag) => (
 					<Tag key={tag} title={tag} />
@@ -24,8 +26,8 @@ export const Card = ({ label, img, url, tags, labels }: Props) => {
 				rel="noreferrer"
 			>
 				<img
-					className="rounded-t-lg max-w-full w-full h-[300px] object-cover"
-					src={img}
+					className="rounded-t-lg max-w-full w-full h-[230px] object-cover"
+					src={img ? img : imgNotFound}
 					alt=""
 				/>
 			</a>
@@ -37,18 +39,18 @@ export const Card = ({ label, img, url, tags, labels }: Props) => {
 					referrerPolicy="no-referrer"
 					rel="noreferrer"
 				>
-					<h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+					<h5 className="mb-2 text-base font-bold tracking-tight text-gray-900 dark:text-white">
 						{label}
 					</h5>
 				</a>
-				<p className="mb-2 text-md text-start font-normal text-gray-500 dark:text-slate-300">
+				<p className="mb-2 text-xs text-start font-normal text-gray-500 dark:text-slate-300">
 					{labels.length > 100 ? labels.slice(0, 101) + '...' : labels}
 				</p>
 				<a
 					href={url}
 					target="_blank"
 					referrerPolicy="no-referrer"
-					className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cGreen rounded-lg hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+					className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-btnPrimary rounded-lg hover:bg-btnHover focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
 					rel="noreferrer"
 				>
 					Read more
