@@ -14,7 +14,7 @@ export const MenuToggler = ({ menuOpen, setMenuOpen, inNavbar }: Props) => {
 					onClick={() => setMenuOpen(!menuOpen)}
 					id="theme-toggle"
 					type="button"
-					className="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-xl p-1.5"
+					className="md:hidden text-gray-500 dark:text-cWhite hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-xl p-1.5"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ export const MenuToggler = ({ menuOpen, setMenuOpen, inNavbar }: Props) => {
 					data-drawer-toggle="separator-sidebar"
 					aria-controls="separator-sidebar"
 					type="button"
-					className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+					className="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-cWhite dark:hover:bg-gray-700 dark:focus:ring-gray-600"
 				>
 					<span className="sr-only">Open sidebar</span>
 					<svg

@@ -8,7 +8,7 @@ import { MenuLink, Props as MenuLinkProps } from './components/MenuLink';
 import { ThemeToggler } from './components/ThemeToggler';
 import { MenuToggler } from './components/MenuToggler';
 import { TagsContainer } from './components/TagsContainer';
-import { SearchInput } from './components/SearchInput';
+// import { SearchInput } from './components/SearchInput';
 import { useTags } from '../../hooks/useTags';
 import { RootReducer } from '../../store/store';
 

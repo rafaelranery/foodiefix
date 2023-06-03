@@ -4,13 +4,10 @@ import { RootReducer } from '../../store/store';
 import { gatherTags } from '../../utils/functions/gatherTags';
 import { gatherHealthLabels } from '../../utils/functions/gatherHealthLabels';
 import { useFilteredList } from '../../hooks/useFilteredList';
-import { useGetRandomQuery } from '../../services/api';
 import { useEffect, useState } from 'react';
 
 export const CardList = () => {
 	const { itens } = useSelector((state: RootReducer) => state.recipesList);
-	// useFilteredList();
-	// const { data: itens } = useGetRandomQuery();
 	const [loader, setLoader] = useState(true);
 	useFilteredList();
 
